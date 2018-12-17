@@ -265,8 +265,8 @@ textarea {
 .sf-menu ul {
   box-shadow: none;
   border: transparent;
-  min-width: 8em;
-  *width: 8em;
+  min-width: 6em;
+  *width: 6em;
 }
 
 .sf-menu a {
@@ -289,6 +289,7 @@ textarea {
 .sf-menu li:hover,
 .sf-menu li.sfHover {
   background: transparent;
+  float: right;
 }
 
 .sf-menu ul li a,
