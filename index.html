@@ -191,10 +191,16 @@
 								<h2 class="fh5co-uppercase-heading-sm fh5co-no-margin-bottom">שמרו על קשר!</h2>
 								<p>אנחנו כאן לכל עניין ושאלה.</p>
 								<div class="fh5co-spacer fh5co-spacer-xxs"></div>
-								<form method="post" action="#">
+								<form method="post" action="https://jumprock.co/mail/arazim">
+								  <div class="form-group">
+								    <label for="name" class="sr-only">שם</label>
+								    <input type="text" name="name" class="form-control input-lg" id="name" placeholder="שם">
+								  </div>
 								  <div class="form-group">
 								    <label for="email" class="sr-only">כתובת אימייל</label>
 								    <input type="email" class="form-control input-lg" id="email" placeholder="כתובת אימייל">
+								    <input type="hidden" name="replyto" value="%email">
+								    <input type="text" name="trapit" value="" style="display:none">
 								  </div>
 								  <div class="form-group">
 								    <label for="subject" class="sr-only">נושא</label>
