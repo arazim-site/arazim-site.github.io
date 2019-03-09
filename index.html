@@ -198,17 +198,17 @@
 								  </div>
 								  <div class="form-group">
 								    <label for="email" class="sr-only">כתובת אימייל</label>
-								    <input type="email" class="form-control input-lg" id="email" placeholder="כתובת אימייל">
+								    <input type="email" name="email" class="form-control input-lg" id="email" placeholder="כתובת אימייל">
 								    <input type="hidden" name="replyto" value="%email">
-								    <input type="text" name="trapit" value="" style="display:none">
+								    <input type="text" name="trapit" value="" style="display:none"><input type="hidden" name="after" value="https://araz.im/index.html">
 								  </div>
 								  <div class="form-group">
 								    <label for="subject" class="sr-only">נושא</label>
-								    <input type="text" class="form-control input-lg" id="subject" placeholder="נושא">
+								    <input type="text" name="subject" class="form-control input-lg" id="subject" placeholder="נושא">
 								  </div>
 								  <div class="form-group">
 								    <label for="message" class="sr-only">תוכן ההודעה</label>
-								    <textarea class="form-control input-lg" rows="3" id="message" placeholder="תוכן ההודעה"></textarea>
+								    <textarea name="message" class="form-control input-lg" rows="3" id="message" placeholder="תוכן ההודעה"></textarea>
 								  </div>
 								  <input type="submit" class="btn btn-primary btn-lg btn-block" value="שליחה">
 								</form>		
