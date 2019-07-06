@@ -793,6 +793,13 @@ body.fh5co-mobile-menu-visible #fh5co-mobile-menu {
   margin-bottom: 0 !important;
 }
 
+.fh5co-uppercase-heading {
+  line-height: 26px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #7b7b7b;
+}
+
 .fh5co-uppercase-heading-sm {
   font-size: 14px;
   line-height: 26px;
