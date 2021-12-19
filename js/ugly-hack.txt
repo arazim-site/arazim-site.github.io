@@ -1,0 +1,25 @@
+This felt like an ugly hack that I felt I needed to document it:
+
+I modified the script owl.carousel.min.js (which is some existing js
+library in minimal version, for the sliders in the website).
+The original text had:
+navClass:["owl-prev","owl-next"]
+somewhere, but I changed the order to
+navClass:["owl-next","owl-prev"]
+in order to fix the behaviour of the arrows (so that the right arrow
+will move the slider to the right, and the left arrow will move the
+slider to the left).
+Then the right arrow and left arrow were switched, which was good, but
+I had to switch their images back.  So in main.js, I modified:
+navText: [
+  "<i class='ti-arrow-left owl-direction'></i>",
+  "<i class='ti-arrow-right owl-direction'></i>"
+]
+to:
+navText: [
+  "<i class='ti-arrow-right owl-direction'></i>",
+  "<i class='ti-arrow-left owl-direction'></i>"
+]
+
+TLDR: modified js/owl.caroussel.min.js and js/main.js in order to fix
+the behaviour of the arrow buttons in the sliders.

@@ -198,7 +198,7 @@
 		var owl2 = $('.owl-carousel-2');
 		owl2.owlCarousel({
 			rtl:true,
-			startPosition: 2,
+			startPosition: 0,
 			items: 1,
 		    loop: true,
 		    margin: 0,
@@ -208,8 +208,8 @@
 		    dots: true,
 		    smartSpeed: 500,
 		    navText: [
-		      "<i class='ti-arrow-left owl-direction'></i>",
-		      "<i class='ti-arrow-right owl-direction'></i>"
+		      "<i class='ti-arrow-right owl-direction'></i>",
+		      "<i class='ti-arrow-left owl-direction'></i>"
 	     	],
 		    responsive: {
 		        0: {
