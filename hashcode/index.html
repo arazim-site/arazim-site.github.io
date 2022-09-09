@@ -1,0 +1,196 @@
+<html>
+	<head>
+		<title>
+			Arazim#Code
+		</title>
+		<link rel="shortcut icon" type="image/png" href="images/arazim_logo.png"/>
+		
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="lib/bootstrap_3.3.7.min.css">
+
+		<!-- jQuery library -->
+		<script src="lib/jquery_3.3.1.min.js"></script>
+
+		<!-- Latest compiled JavaScript -->
+		<script src="lib/bootstrap_3.3.7.min.js"></script>
+		
+		<link rel="stylesheet" type="text/css" href="lib/datatables_1.10.16_3.1.3.min.css"/>
+ 
+		<script type="text/javascript" src="lib/datatables_1.10.16_3.1.3.min.js"></script>
+		
+		<link href="lib/fileinput_4.4.5.min.css" media="all" rel="stylesheet" type="text/css" />
+		<script src="lib/fileinput_4.4.5.min.js"></script>
+		
+		<script type='text/javascript' src='lib/reconnecting-websocket.min.js'></script>
+		
+		<link rel='stylesheet' type='text/css' href='style.css'/>
+		
+		<script src='script.js'></script>
+	</head>
+	
+	<body>
+		<h1>
+			<div class='logo'>
+				<span class='a'>A</span><span class='r'>r</span><span class='a'>a</span><span class='z'>z</span><span class='i'>i</span><span class='m'>m</span>
+				<span class='hash'>#</span>
+				<span class='code'>Code</span>
+			</div>
+		</h1>
+		
+		<div class='main-content'>
+			<h2 class='header' data-toggle='collapse' data-target='#getting-started'>Getting Started</h2>
+			<div id='getting-started' class='collapse in'>
+				<ul>
+					<li><a href="online_qualification_round_2018.pdf">Official Instructions PDF</a></li>
+					<li>Input files:
+						<ol type="a">
+							<li><a href="a_example.in">Example</a></li>
+							<li><a href="b_should_be_easy.in">Should be Easy</a></li>
+							<li><a href="c_no_hurry.in">No Hurry</a></li>
+							<li><a href="d_metropolis.in">Metropolis</a></li>
+							<li><a href="e_high_bonus.in">High Bonous</a></li>
+						</ol>
+					</li>
+					<li><a href="code/main.cpp">C++ IO Code</a></li>
+					<li><a href="code/main.py">Python IO Code</a></li>
+				</ul>
+			</div>
+			
+			<h2 class='header' data-toggle='collapse' data-target='#scoreboard-div'>Scoreboard</h2>
+			<div id='scoreboard-div' class='collapse in'>
+				<table id='scoreboard' class='table table-striped table-hover table-bordered'>
+					<thead>
+						<th>Rank</th> <th>Group Name</th> <th>Total Score</th> <th> A's Score </th> <th> B's Score </th> <th> C's Score </th> <th> D's Score </th> <th> E's Score </th>
+					</thead>
+					<tbody>
+					</tbody>
+				</table>
+			</div>
+
+			<h2 class='header' data-toggle='collapse' data-target='#myteam'>My Team</h2>
+			<div id='myteam' class='collapse in'>
+				<table id='scores-table' class='table table-striped table-hover table-bordered'>
+					<thead>
+						<th>Challenge</th>
+						<th>Score</th>
+						<th>Uploader</th>
+						<th>Time</th>
+					</thead>
+					<tr>
+						<td>A - Example</td>
+						<td id='myScoreA' style='text-align: right;'>-</td>
+						<td id='uploaderA'>-</td>
+						<td id='timeA'>-</td>
+					</tr>
+					<tr>
+						<td>B - Should be Easy</td>
+						<td id='myScoreB' style='text-align: right;'>-</td>
+						<td id='uploaderB'>-</td>
+						<td id='timeB'>-</td>
+					</tr>
+					<tr>
+						<td>C - No Hurry</td>
+						<td id='myScoreC' style='text-align: right;'>-</td>
+						<td id='uploaderC'>-</td>
+						<td id='timeC'>-</td>
+					</tr>
+					<tr>
+						<td>D - Metropolis</td>
+						<td id='myScoreD' style='text-align: right;'>-</td>
+						<td id='uploaderD'>-</td>
+						<td id='timeD'>-</td>
+					</tr>
+					<tr>
+						<td>E - High Bonus</td>
+						<td id='myScoreE' style='text-align: right;'>-</td>
+						<td id='uploaderE'>-</td>
+						<td id='timeE'>-</td>
+					</tr>
+				</table>
+				<table id='total-table' class='table table-bordered'>
+					<tr>
+						<th>Total Score:</th>
+						<td id='myTotalScore' style='text-align: right;'>-</td>
+						<th>Rank:</th>
+						<td id='myRank'>-</td>
+					</tr>
+				</table>
+			</div>
+
+			<h2 class='header' data-toggle='collapse' data-target='#submission-div'>Submission</h2>
+			<div id='submission-div' class='collapse in'>
+				<div class="input-group name-labels">
+					<span class="input-group-addon">Group name:</span>
+					<input id="groupName" type="text" class="form-control" name="msg" placeholder="Group name">
+				</div>
+				
+				<div class="input-group name-labels">
+					<span class="input-group-addon">Member name:</span>
+					<input id="memberName" type="text" class="form-control" name="msg" placeholder="Member name">
+				</div>
+
+				<table id='submission-table' class='table table-striped'>
+					<tr>
+						<td>A - Example</td>
+						<td><input id='subA' type='file' class='file' data-show-preview='false' data-show-upload='false'></td>
+					</tr>
+					<tr>
+						<td>B - Shoud be Easy</td>
+						<td><input id='subB' type='file' class='file' data-show-preview='false' data-show-upload='false'></td>
+					</tr>
+					<tr>
+						<td>C - No Hurry</td>
+						<td><input id='subC' type='file' class='file' data-show-preview='false' data-show-upload='false'></td>
+					</tr>
+					<tr>
+						<td>D - Metropolis</td>
+						<td><input id='subD' type='file' class='file' data-show-preview='false' data-show-upload='false'></td>
+					</tr>
+					<tr>
+						<td>E - High Bonus</td>
+						<td><input id='subE' type='file' class='file' data-show-preview='false' data-show-upload='false'></td>
+					</tr>
+				</table>
+
+				<center>
+					<table class='submission-buttons'>
+						<tr>
+							<td>
+								<button type="button" class="btn btn-default btn-lg" onclick='if (submitMulti(groupName.value, memberName.value, subA, subB, subC, subD, subE)) resetFileChoosers()'>
+									<span class="glyphicon glyphicon-upload" aria-hidden="true"></span> Upload
+								</button>
+							</td>
+							<td>
+								<button type="button" class="btn btn-default btn-lg" onclick='resetFileChoosers()'>
+									<span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Remove All
+								</button>
+							</td>
+							<td>
+								<button type="button" class="btn btn-default btn-lg" onclick='getHistory(groupName.value)'>
+									<span class="glyphicon glyphicon-refresh" aria-hidden="true"></span> Reload
+								</button>
+							</td>
+						</tr>
+					</table>
+				</center>
+			</div>
+			<div id='statuses'>
+			</div>
+
+			<h2 class='header' data-toggle='collapse' data-target='#history-div'>Submission History</h2>
+			<div id='history-div' class='collapse in'>
+				<table id='history' class='table table-striped table-hover table-bordered'>
+					<thead>
+						<th>Time</th> <th>Challenge</th> <th>Member</th> <th>Score</th> <th>Output</th>
+					</thead>
+				</table>
+			</div>
+		</div>
+		<div id='credits'>
+		</div>
+		<div id='server-status'>
+			<span id='server-connected' class="glyphicon glyphicon-ok-sign" aria-hidden="true" style='color: rgb(0,180,0); display: none;' title='connected'></span>
+			<span id='server-disconnected' class="glyphicon glyphicon-remove-sign" aria-hidden="true" style='color: rgb(255,0,0);' title='disconnected'></span>
+		</div>
+	</body>
+</html>
