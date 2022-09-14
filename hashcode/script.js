@@ -244,7 +244,7 @@ function resetFileChoosers()
 	}
 }
 
-var handler = new Handler('ws://localhost:8080/');
+var handler = new Handler('wss://f3ca-77-125-1-78.eu.ngrok.io');
 console.log('connected to server');
 
 setTimeout(function(event) {
