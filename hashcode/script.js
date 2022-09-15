@@ -244,7 +244,7 @@ function resetFileChoosers()
 	}
 }
 
-var handler = new Handler('wss://9dc8-132-66-152-106.eu.ngrok.io');
+var handler = new Handler('wss://eb43-132-66-152-106.eu.ngrok.io');
 console.log('connected to server');
 
 setTimeout(function(event) {
